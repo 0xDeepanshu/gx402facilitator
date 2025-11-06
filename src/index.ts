@@ -160,11 +160,21 @@ app.get('/supported', async (req: Request, res: Response) => {
       x402Version: 1,
       scheme: 'exact',
       network: 'sei-testnet',
+      extra: {
+      chainId: 1328,
+      rpcUrl: "https://1328.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+      symbol: "SEI"
+  }
     });
     kinds.push({
       x402Version: 1,
       scheme: 'exact',
       network: 'sei-testnet',
+      extra: {
+      chainId: 1328,
+      rpcUrl: "https://1328.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+      symbol: "SEI"
+  }
     });
   }
 
