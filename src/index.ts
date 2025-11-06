@@ -79,7 +79,8 @@ app.post('/verify', async (req: Request, res: Response) => {
         return;
       }
       client = createConnectedClient(paymentRequirements.network);
-    } else if (SupportedSVMNetworks.includes(paymentRequirements.network)) {
+      
+    } else if (SupportedSVMNetworks.includes(paymentRequirements.network),{rpcUrl: "https://evm-rpc-testnet.sei-apis.com"}) {
       if (!SVM_PRIVATE_KEY) {
         res.status(400).json({ error: 'SVM network not supported - no private key configured' });
         return;
@@ -162,7 +163,7 @@ app.get('/supported', async (req: Request, res: Response) => {
       network: 'sei-testnet',
       extra: {
       chainId: 1328,
-      rpcUrl: "https://1328.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+      rpcUrl: "https://evm-rpc-testnet.sei-apis.com",
       symbol: "SEI"
   }
     });
@@ -172,7 +173,7 @@ app.get('/supported', async (req: Request, res: Response) => {
       network: 'sei-testnet',
       extra: {
       chainId: 1328,
-      rpcUrl: "https://1328.rpc.thirdweb.com/${THIRDWEB_API_KEY}",
+      rpcUrl: "https://evm-rpc-testnet.sei-apis.com",
       symbol: "SEI"
   }
     });
