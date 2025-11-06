@@ -159,12 +159,12 @@ app.get('/supported', async (req: Request, res: Response) => {
     kinds.push({
       x402Version: 1,
       scheme: 'exact',
-      network: 'base-sepolia',
+      network: 'sei-testnet',
     });
     kinds.push({
       x402Version: 1,
       scheme: 'exact',
-      network: 'base',
+      network: 'sei',
     });
   }
 
