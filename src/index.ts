@@ -164,7 +164,7 @@ app.get('/supported', async (req: Request, res: Response) => {
     kinds.push({
       x402Version: 1,
       scheme: 'exact',
-      network: 'sei',
+      network: 'sei-testnet',
     });
   }
 
